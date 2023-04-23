@@ -24,7 +24,11 @@ Create a ssh key and add it to your github account
 
 Then clone the project
 
-build it executing make all
+build it by executing make all
+
+then you can run it via python app.py
+
+you can perform a prediction by executing the script make_prediction.sh
 
 
 
@@ -75,6 +79,6 @@ Port: 443
 
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
+[See the demo here](https://youtu.be/d3Agl9_dXhk)
 
 
