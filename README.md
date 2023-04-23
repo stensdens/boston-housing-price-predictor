@@ -1,3 +1,6 @@
+![example workflow](https://github.com/stensdens/boston-housing-price-predictor/actions/workflows/main.yml/badge.svg)
+
+
 # Overview
 
 This simple flask application can be used to predict the boston housing prices.
