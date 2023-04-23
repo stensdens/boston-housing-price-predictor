@@ -66,8 +66,7 @@ stages:
     condition: succeeded()
     jobs:
       - deployment: DeploymentJob
-        pool:
-          vmImage: $(vmImageName)
+        pool: myagentpool
         environment: $(environmentName)
         strategy:
           runOnce:
