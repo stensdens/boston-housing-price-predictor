@@ -53,7 +53,7 @@ stages:
               archiveType: zip
               archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
               replaceExistingArchive: true
-              
+
           - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
             displayName: 'myStep 5 - Upload package'
             artifact: drop
