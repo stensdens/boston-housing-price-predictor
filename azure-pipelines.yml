@@ -54,6 +54,17 @@ stages:
               archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
               replaceExistingArchive: true
 
+          - task: AzureWebApp@1
+            displayName: 'Deploy Azure Web App : {{ webAppName }}
+            inputs:
+              appType: webAppLinux 
+              azureSubscription: $(azureServiceConnectionId)
+              appName: $(webAppName)
+              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+              deploymentMethod: zipDeploy
+              startUpCommand: 'gunicorn --bind=0.0.0.0 --workers=4 startup:app'
+
           - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
             displayName: 'myStep 5 - Upload package'
             artifact: drop
+
