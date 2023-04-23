@@ -56,7 +56,6 @@ stages:
 
           - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
             displayName: 'myStep 5 - Upload package'
-            artifact: drop
 
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : {{ webAppName }}'
