@@ -15,12 +15,20 @@ The spreadsheet can be found under [Project Plan](project-management.xlsx)
 Architectural Overview
 ![Architecture Diagram](architecture.png "Architecture Diagram")
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
 * Project running on Azure App Service
 
-* Project cloned into Azure Cloud Shell
+Login into azure and open your Azure Cloud Shell
 
+Create a ssh key and add it to your github account
+
+Then clone the project
+
+build it executing make all
+
+
+
+* Project cloned into Azure Cloud Shell
 ![](screenshots/1_Setup-Cloud-Shell_Git_Clone.png)
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
