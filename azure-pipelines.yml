@@ -13,7 +13,7 @@ variables:
   webAppName: 'bostonhousepricepredictor'
 
   # Environment name
-  environmentName: 'flask-ml-service'
+  environmentName: 'bostonhousepricepredictor'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
