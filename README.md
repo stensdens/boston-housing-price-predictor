@@ -1,11 +1,12 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+This simple flask application can be used to predict the boston housing prices.
+
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
+
+This is the [Trello Board](https://trello.com/b/47mH7lOy/boston-house-prices) tracking the tasks for the project.
 * A link to a spreadsheet that includes the original and final project plan>
 
 ## Instructions
@@ -19,9 +20,13 @@
 
 * Project cloned into Azure Cloud Shell
 
+![Cloned project](D:\workspace\boston-housing-price-predictor\screenshots\1_Setup-Cloud-Shell_Git_Clone.png)
+
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
 
 * Output of a test run
+  ![Run Part 1](D:\workspace\boston-housing-price-predictor\screenshots\3_Part1_Local_Test.png)
+  ![Run Part 2](D:\workspace\boston-housing-price-predictor\screenshots\3_Part2_Local_Test.png)
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
