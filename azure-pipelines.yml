@@ -25,28 +25,27 @@ stages:
       - job: BuildJob
         pool: myAgentPool
         steps:
-          - script: |
-              python3.7 -m pip install --upgrade pip
-              python3.7 -m pip install setup
-              python3.7 -m pip install -r requirements.txt
-            workingDirectory: $(projectRoot)
-            displayName: 'myStep 1'
+          - task: UsePythonVersion@0
+            inputs:
+              versionSpec: '$(pythonVersion)'
+            displayName: 'Use Python $(pythonVersion)'
 
           - script: |
-              export PATH=$HOME/.local/bin:$PATH
-              make install
+              python -m venv antenv
+              source antenv/bin/activate
+              python -m pip install --upgrade pip
+              pip install setup
+              pip install -r requirements.txt
             workingDirectory: $(projectRoot)
-            displayName: 'myStep 2'
-
           - script: |
-              export PATH=$HOME/.local/bin:$PATH
+              python -m venv antenv
+              source antenv/bin/activate
               make install
               make lint
             workingDirectory: $(projectRoot)
-            displayName:  'myStep 3 - Run lint tests'
-
+            displayName: 'Run lint tests'
           - task: ArchiveFiles@2
-            displayName: 'myStep 4 - Archive files'
+            displayName: 'Archive files'
             inputs:
               rootFolderOrFile: '$(projectRoot)'
               includeRootFolder: false
@@ -63,5 +62,5 @@ stages:
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
-              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+              package: $(Pipeline.Workspace)/a/$(Build.BuildId).zip
 
