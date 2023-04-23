@@ -63,7 +63,7 @@ stages:
               appType: webAppLinux
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
-              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+              package: $(Pipeline.Workspace)/a/$(Build.BuildId).zip
               deploymentMethod: zipDeploy
               startUpCommand: 'gunicorn --bind=0.0.0.0 --workers=4 startup:app'
 
