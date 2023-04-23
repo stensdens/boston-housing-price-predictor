@@ -13,7 +13,7 @@ The spreadsheet can be found under [Project Plan](project-management.xlsx)
 ## Instructions
 
 <TODO:  
-![Architecture Diagram](D:\workspace\boston-housing-price-predictor\architecture.png "Architecture Diagram")
+![Architecture Diagram](architecture.png "Architecture Diagram")
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
@@ -21,14 +21,14 @@ The spreadsheet can be found under [Project Plan](project-management.xlsx)
 
 * Project cloned into Azure Cloud Shell
 
-![](D:\workspace\boston-housing-price-predictor\screenshots\1_Setup-Cloud-Shell_Git_Clone.png)
+![](screenshots/1_Setup-Cloud-Shell_Git_Clone.png)
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
 
 * Output of a test run
 
-![](D:\workspace\boston-housing-price-predictor\screenshots\3_Part1_Local_Test.png)
-![](D:\workspace\boston-housing-price-predictor\screenshots\3_Part2_Local_Test.png)
+![](screenshots/3_Part1_Local_Test.png)
+![](screenshots/3_Part2_Local_Test.png)
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
