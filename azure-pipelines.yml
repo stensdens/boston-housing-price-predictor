@@ -53,11 +53,11 @@ stages:
               archiveType: zip
               archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
               replaceExistingArchive: true
-
+              
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : {{ webAppName }}
+            displayName: 'Deploy Azure Web App : {{ webAppName }}'
             inputs:
-              appType: webAppLinux 
+              appType: webAppLinux
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
