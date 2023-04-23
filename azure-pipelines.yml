@@ -65,7 +65,6 @@ stages:
     condition: succeeded()
     jobs:
       - deployment: DeploymentJob
-        environment: $(environmentName)
         strategy:
           runOnce:
             deploy:
