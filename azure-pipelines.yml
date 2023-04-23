@@ -55,12 +55,13 @@ stages:
               replaceExistingArchive: true
 
           - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-            displayName: 'myStep 5 - Upload package'
+            displayName: 'Upload package'
+            artifact: drop
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : {{ webAppName }}'
+            displayName: 'Deploy Azure Web App : bostonhousepricepredictor'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
-              package: $(Pipeline.Workspace)/a/$(Build.BuildId).zip
+              package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
 
