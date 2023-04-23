@@ -1,4 +1,4 @@
-![Badge](https://github.com/stensdens/boston-housing-price-predictor/actions/workflows/main.yml/badge.svg](https://github.com/stensdens/boston-housing-price-predictor/actions/workflows/python-app.yml/badge.svg)
+![Badge](https://github.com/stensdens/boston-housing-price-predictor/actions/workflows/main.yml/badge.svg)
 
 
 # Overview
