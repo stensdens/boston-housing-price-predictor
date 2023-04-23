@@ -1,0 +1,1 @@
+az webapp up -n bostonhousepricepredictor --resource-group azuredevops
