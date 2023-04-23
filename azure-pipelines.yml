@@ -64,6 +64,4 @@ stages:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/a/$(Build.BuildId).zip
-              deploymentMethod: zipDeploy
-              startUpCommand: 'python app.py'
 
